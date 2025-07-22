@@ -23,4 +23,3 @@ vat = price*7/100
 result = price + vat
 print(vat)
 print(result)
-

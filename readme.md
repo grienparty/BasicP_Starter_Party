@@ -1,1 +1,1 @@
-sawaddee
+Manita Seedakaew, Party, 68130500128
