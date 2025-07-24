@@ -24,16 +24,42 @@
 #     print(f"ครั้งที่ {i}")
 #     i = i + 1
 
-mons = "ouan"
-hp = 100
-gun = 30
-knife = 20
-pan = 5
+mons_hp = 100
+gun_damage = 30
+knife_damage = 20
+pan_damage = 50
 
 manu = int(input("Enter your choice 1(fight) 2(run) : "))
+
 if manu == 1 :
-    print("You have to fight!!")
-    times = int(input("how many move you wanna fight : "))
-    weapon = input("which weapon you want 1(gun) 2(knife) 3(pan) : ")
+    round_attack = int(input("Enter number of round attack : "))
+    for i in range(round_attack) :
+        print(f"GUN => damage {gun_damage}")
+        print(f"KNIFE => damage {knife_damage}")
+        print(f"PAN => damage {pan_damage}")
+
+    weapon = input("which weapon you want : ")
+
+    if weapon == "GUN" :
+        mons_hp = mons_hp - gun_damage
+    elif weapon == "KNIFE" :
+        mons_hp = mons_hp - knife_damage
+    elif weapon == "PAN" :
+        mons_hp = mons_hp - pan_damage
+
+    print(f"monster_hp = {mons_hp}")
+
+    if mons_hp == 0 :
+        break
+
+    if mons_hp < 0 :
+        print("monster_hp = 20")
+
+    if mons_hp == 0 :
+        print("WIN !")
+
+    else :
+        print("you lose !")
+
 else :
     print("loser lol")
